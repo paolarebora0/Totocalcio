@@ -1,5 +1,7 @@
 package it.polito.tdp.toto;
 
+import java.util.List;
+
 public class TestPronostico {
 
 	public static void main(String[] args) {
@@ -10,11 +12,14 @@ public class TestPronostico {
 		p.add(new Previsione(Risultato.ICS));
 		p.add(new Previsione(Risultato.UNO, Risultato.DUE)) ;
 		
-		System.out.println(p) ;
+//		System.out.println(p) ;
 		
 		Espandi e = new Espandi() ;
 		
 		e.espandiPronostico(p);
+		
+		List<Schedina> soluzioni = e.espandiPronostico(p);
+		System.out.println(soluzioni);
 		
 	}
 
